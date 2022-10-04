@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title The Pawn Simulator
+    %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  %body
+    / %header
+    /   %nav.is-fixed-top.navbar{ "aria-label": "main navigation", role: "navigation" }
+    /     .navbar-brand
+    /       %h1 THE PAWN SIMULATOR
+
+    %section.container.is-fluid
+      = yield
+
+    %footer.footer
+      .content.has-text-centered
+        %p
+          %strong The Pawn Simulator
+          by
+          = succeed "." do
+            %a{ href: "https://jyothishkumar.in"} Jyothish Kumar
