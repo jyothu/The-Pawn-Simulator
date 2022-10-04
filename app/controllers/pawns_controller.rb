@@ -2,7 +2,12 @@ class PawnsController < ApplicationController
   def index; end
 
   def move
-    debugger
+    Board.instance
+    pawn = Pawn.new
+    
+    File.read(params[:moves].path).each_line do |command|
+      pawn.execute(command)
+    end
   end
 
   def log
@@ -12,4 +17,7 @@ class PawnsController < ApplicationController
       format.js
     end
   end
+
+  private
+
 end

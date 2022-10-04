@@ -30,5 +30,6 @@ module ThePawnSimulator
     #
     # config.time_zone = "Central Time (US & Canada)"
     config.eager_load_paths << Rails.root.join('lib', 'loggers')
+    config.eager_load_paths << Rails.root.join('lib', 'chess')
   end
 end
