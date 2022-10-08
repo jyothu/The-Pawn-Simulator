@@ -1,27 +1,23 @@
-.the-pawn-move.is-flex
-  .card
-    .card-content
-      .content.is-centered
-        %h2.subtitle
-          Upload file with commands moves
-          %br to move the pawn.
+.card
+  .card-content
+    .content.is-centered
+      %h2.subtitle
+        Upload file with commands moves
+        %br to move the pawn. (Under application folder/data)
 
-        = form_tag move_pawns_path, remote: true, multipart: true do |f|
-          .file.has-name
-            %label.file-label
-              = file_field_tag :moves, class: 'file-input', id: 'file-upload'
-              %span.file-cta
-                %span.file-icon
-                  %i.fas.fa-upload
-                %span.file-label
-                  Upload File
-              %span.file-name#file-name
-                File contains commands to move
-          .field.is-grouped{ style: "margin-top: 20px;" }
-            .control
-              = submit_tag 'Upload Command File', class: 'button is-link'
-                
-  .card
-    .card-content
-      .content
-        %pre#pawn-move-log
+      = form_tag move_pawns_path, local: true, data: { turbo: false }, multipart: true do |f|
+        .file.has-name
+          %label.file-label
+            = file_field_tag :moves, class: 'file-input', id: 'file-upload'
+            %span.file-cta
+              %span.file-icon
+                %i.fas.fa-upload
+              %span.file-label
+                Upload File
+            %span.file-name#file-name
+              File contains commands to move
+        .field.is-grouped{ style: "margin-top: 20px;" }
+          .control
+            = submit_tag 'Upload Command File', class: 'button is-link', remote: true
+
+          

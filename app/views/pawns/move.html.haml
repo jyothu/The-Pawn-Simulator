@@ -1,2 +1,15 @@
-%h1 ThePawns#move
-%p Find me in app/views/the_pawns/move.html.haml
+.the-pawn-move.is-flex
+  .card
+    .card-content
+      .content.is-centered
+        %h5.subtitle
+          FINAL POSITION:- 
+          %br= final_pawn_position_display
+
+        %br
+        = link_to 'Go Home', root_url
+
+  .card
+    .card-content
+      .content
+        %pre#pawn-move-log

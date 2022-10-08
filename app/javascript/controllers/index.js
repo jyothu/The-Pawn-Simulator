@@ -16,10 +16,9 @@ window.$ = jquery
 
 $( document ).ready(function() {
 	$.ajax({
-	    url: "pawns/log",
+	    url: "/pawns/log",
 	    type: 'GET'
 	});
-
 
     
     var input = document.querySelector("#file-upload");

@@ -28,7 +28,7 @@ class Board
   	end
   end
 
-  def valid_cell?(x, y)
+  def self.valid_cell?(x, y)
     instance.columns.any? { |c| c.x_position == x && c.y_position == y }
   end
 end

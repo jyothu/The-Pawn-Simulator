@@ -3,10 +3,11 @@ class PawnsController < ApplicationController
 
   def move
     Board.instance
-    pawn = Pawn.new
+    clear_pawn_move_logger
+    @pawn = Pawn.new
     
-    File.read(params[:moves].path).each_line do |command|
-      pawn.execute(command)
+    File.read(permitted_params[:moves].path).each_line do |command|
+      @pawn.execute(command)
     end
   end
 
@@ -20,4 +21,11 @@ class PawnsController < ApplicationController
 
   private
 
+  def clear_pawn_move_logger
+    PawnMoveLogger.truncate!
+  end
+
+  def permitted_params
+    params.permit(:moves)
+  end
 end
