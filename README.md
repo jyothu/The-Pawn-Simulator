@@ -22,24 +22,6 @@ the pawn moves it can move 1 or 2 squares.
 EAST or WEST and Colour(White or Black)
 
 1. The origin (0,0) can be considered to be the SOUTH WEST most corner.
-
-        WEST
-         |
-SOUTH----|-----NORTH
-         |      
-        EAST
-
-00 01 02 03 04 05 06 07
-10 11 12 13 14 15 16 17
-20 21 22 23 24 25 26 27
-30 31 32 33 34 35 36 37
-40 41 42 43 44 45 46 47
-50 51 52 53 54 55 56 57
-60 61 62 63 64 65 66 67
-70 71 72 73 74 75 76 77
-
-
-
 2. The first valid command to the pawn is a PLACE command, after that, any sequence
 of commands may be issued, in any order, including another PLACE command. The
 application should discard all commands in the sequence until a valid PLACE
@@ -67,8 +49,6 @@ MOVE 1
 REPORT
 Output: 0,1,NORTH,WHITE (ithengine ingane varunne?)
 
-My Output => 1,0, NORTH, WHITE (North ilek 1 move aakiyaal Y alle maaruka?)
-
 ii. PLACE 0,0,NORTH,BLACK
 LEFT
 REPORT
@@ -82,7 +62,6 @@ MOVE
 REPORT
 Output: 3,3,NORTH,BLACK
 
-1,2 => move 2 => 3,2 => move 1 => 
 
 Deliverables
 - The code source files, the test data and any test code.
