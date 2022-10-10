@@ -72,3 +72,16 @@ Time
 - This task should take you no more than 4-6 hours to complete.
 NOTE:
 - This task should be completed in the tech stack you are applying for e.g. ROR, Ionic,
+
+
+
+### The steps to run the application The-Pawn-Simulator.
+
+  1. Take your terminal
+  2. install ruby-3.0.4 if not
+  3. git clone git@github.com:jyothu/The-Pawn-Simulator.git
+  4. cd The-Pawn-Simulator
+  5. bundle install
+  6. bundle exec rails s
+  7. Now please take http://localhost:3001
+    - Test data is available under the application folder -> The-Pawn-Simulator/data/
